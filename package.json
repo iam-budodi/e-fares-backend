@@ -1,0 +1,45 @@
+{
+  "name": "e-fares-backend",
+  "version": "1.0.0",
+  "description": "serve resources from the database ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node --presets='@babel/preset-env' --ignore='foo|bar|baz'",
+    "start": "nodemon --exec npm run babel-node -- srcServer/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iam-budodi/e-fares-backend.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequelize",
+    "postgresql",
+    "rest",
+    "api"
+  ],
+  "author": "Japhet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iam-budodi/e-fares-backend/issues"
+  },
+  "homepage": "https://github.com/iam-budodi/e-fares-backend#readme",
+  "dependencies": {
+    "@babel/polyfill": "7.12.1",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "pg": "8.4.1",
+    "pg-hstore": "2.3.3",
+    "sequelize": "6.3.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.12.1",
+    "@babel/core": "7.12.3",
+    "@babel/node": "7.12.1",
+    "@babel/plugin-transform-async-to-generator": "7.12.1",
+    "@babel/preset-env": "7.12.1"
+  }
+}
