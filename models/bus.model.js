@@ -6,7 +6,7 @@ export default (sequelize, Sequelize) => {
     category: {
       type: Sequelize.STRING
     },
-    depart_date: {
+    departDate: {
       type: Sequelize.DATE
     },
     // depart_time: {
@@ -15,16 +15,19 @@ export default (sequelize, Sequelize) => {
     // arrival_time: {
     //   type: Sequelize.DATETIME
     // },
-    total_seat: {
+    totalSeat: {
       type: Sequelize.INTEGER
     },
-    seat_number: {
+    seatNumber: {
       type: Sequelize.INTEGER
     },
-    seat_available: {
+    seatAvailable: {
       type: Sequelize.INTEGER
     },
-    bus_image: {
+    price: {
+      type: Sequelize.INTEGER
+    },
+    busImage: {
       type: Sequelize.STRING
     },
     status: {

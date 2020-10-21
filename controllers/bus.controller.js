@@ -16,11 +16,12 @@ export function create(req, res) {
   const bus = {
     route: req.body.route,
     category: req.body.category,
-    depart_date: req.body.depart_date,
-    total_seat: req.body.total_seat,
-    seat_number: req.body.seat_number,
-    seat_available: req.body.seat_available,
-    bus_image: req.body.bus_image,
+    departDate: req.body.departDate,
+    totalSeat: req.body.totalSeat,
+    seatNumber: req.body.seatNumber,
+    seatAvailable: req.body.seatAvailable,
+    price: req.body.price,
+    busImage: req.body.busImage,
     status: req.body.status ? req.body.status : false,
   };
 
