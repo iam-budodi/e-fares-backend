@@ -1,9 +1,12 @@
 export default (sequelize, Sequelize) => {
   const Bus = sequelize.define('bus', {
-    route: {
+    busName: {
       type: Sequelize.STRING
     },
-    category: {
+    busRoute: {
+      type: Sequelize.STRING
+    },
+    busCategory: {
       type: Sequelize.STRING
     },
     departDate: {
@@ -15,10 +18,10 @@ export default (sequelize, Sequelize) => {
     // arrival_time: {
     //   type: Sequelize.DATETIME
     // },
-    totalSeat: {
+    totalSeats: {
       type: Sequelize.INTEGER
     },
-    seatNumber: {
+    seatSelected: {
       type: Sequelize.INTEGER
     },
     seatAvailable: {
@@ -27,7 +30,7 @@ export default (sequelize, Sequelize) => {
     price: {
       type: Sequelize.INTEGER
     },
-    busImage: {
+    imageUrl: {
       type: Sequelize.STRING
     },
     status: {

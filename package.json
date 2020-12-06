@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node --presets='@babel/preset-env' --ignore='foo|bar|baz'",
-    "start": "nodemon --exec npm run babel-node -- srcServer/app.js"
+    "start": "nodemon --exec DEBUG=app babel-node srcServer/app.js",
+    "lint": "./node_modules/.bin/eslint srcServer/app.js --fix"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,13 @@
   "homepage": "https://github.com/iam-budodi/e-fares-backend#readme",
   "dependencies": {
     "@babel/polyfill": "7.12.1",
+    "@openpesa/pesa-js": "0.0.3",
     "body-parser": "1.19.0",
+    "chalk": "2.4.2",
     "cors": "2.8.5",
+    "debug": "4.3.1",
     "express": "4.17.1",
+    "morgan": "1.10.0",
     "pg": "8.4.1",
     "pg-hstore": "2.3.3",
     "sequelize": "6.3.5"
@@ -40,6 +45,18 @@
     "@babel/core": "7.12.3",
     "@babel/node": "7.12.1",
     "@babel/plugin-transform-async-to-generator": "7.12.1",
-    "@babel/preset-env": "7.12.1"
+    "@babel/preset-env": "7.12.1",
+    "eslint": "7.15.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.22.1"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": ["node_modules/**/node_modules"],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
   }
 }

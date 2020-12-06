@@ -5,7 +5,7 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Bus
 export function create(req, res) {
   // Validate request
-  if (!req.body.route) {
+  if (!req.body.busName) {
     res.status(400).send({
       message: 'Content can not be empty!',
     });
@@ -14,15 +14,16 @@ export function create(req, res) {
 
   // Create a Bus
   const bus = {
-    route: req.body.route,
-    category: req.body.category,
+    busName: req.body.busName,
+    busRoute: req.body.busRoute,
+    busCategory: req.body.busCategory,
     departDate: req.body.departDate,
-    totalSeat: req.body.totalSeat,
-    seatNumber: req.body.seatNumber,
+    totalSeats: req.body.totalSeats,
+    seatSelected: req.body.seatSelected,
     seatAvailable: req.body.seatAvailable,
     price: req.body.price,
-    busImage: req.body.busImage,
-    status: req.body.status ? req.body.status : false,
+    imageUrl: req.body.imageUrl,
+    status: true // req.body.status ? req.body.status : false,
   };
 
   // Save Bus in the database
@@ -50,7 +51,7 @@ export function findAll(req, res) {
     .catch((err) => {
       res.status(500).send({
         message:
-          err.message || 'Error occurred while retrieving Buses!',
+         'Error occurred while retrieving Buses!' || err.message,
       });
     });
 }
