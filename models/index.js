@@ -1,5 +1,12 @@
-import { DB, USER, PASSWORD, HOST, dialect as _dialect, pool as _pool } from '../config/db.config';
 import Sequelize from 'sequelize';
+import {
+  DB,
+  USER,
+  PASSWORD,
+  HOST,
+  dialect as _dialect,
+  pool as _pool,
+} from '../config/db.config';
 
 // @ts-ignore
 const sequelize = new Sequelize(DB, USER, PASSWORD, {
@@ -19,7 +26,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.buses = require('./bus.model').default(sequelize, Sequelize);
+db.buses = require('./busModel').default(sequelize, Sequelize);
 
 export default db;
-

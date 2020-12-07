@@ -39,4 +39,4 @@ export default (sequelize, Sequelize) => {
   });
 
   return Bus;
-}
+};
